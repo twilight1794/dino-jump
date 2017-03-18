@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Dino Jump</title>
+    <link rel="stylesheet" type="text/css" src="css/main.css" />
+    <link rel="icon" type="image/svg" href="/svg/favicon.svg" />
+    <meta name="author" content="Giovanni Alfredo Garciliano Díaz" />
+    <meta name="copyright" content="© 2017 Giovanni Alfredo Garciliano Díaz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Un port libre y de código abierto en HTML/CSS/JavaScript del juego del dinosaurio de Chrome" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
+    <meta charset="utf-8">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Dino Jump</h1>
+    </header>
+
+    <article>
+        <h2>Acerca del juego</h2>
+        <section>
+            <h3>Qué es</h3>
+        </section>
+        <section>
+            <h3>Cómo jugar</h3>
+        </section>
+        <section>
+            <h3>Empieza a jugar</h3>
+            <form action="game.php" method="GET" id="modegame">
+            <!-- Aquí se selecciona el paisaje -->
+                <fieldset>
+                    <legend>Selecciona el paisaje:</legend>
+                    <input type="radio" name="personaje" value="desierto" checked="checked" id="desierto" /><label for="desierto">Desierto</label>
+                    <input type="radio" name="personaje" value="sabana" id="sabana" /><label for="sabana">Sabana</label>
+                </fieldset>
+            <!-- Aquí se selecciona el personaje -->
+                <fieldset>
+                    <legend>Selecciona el personaje:</legend>
+                    <input type="radio" name="personaje" value="rex" checked="checked" id="rex" /><label for="rex">Rex</label>
+                    <input type="radio" name="personaje" value="bunny" id="bunny" /><label for="bunny">Bunny</label>
+                </fieldset>
+                <input type="submit" name="jugar" value="A jugar!" />
+            </form>
+        </section>
+    </article>
+
+    <article>
+        <h2>Acerca de los creadores</h2>
+        <section>
+            <h3>Giovanni Alfredo Garciliano Díaz</h3>
+            <img src="" alt="" title="" class="creador" />
+            <p class="descripcion"></p>
+            <p class="facebook"><img src="svg/fb.svg" class="social-icon" /><a href="">Giovanni Alfredo Garciliano Díaz</a></p>
+        </section>
+        <section>
+            <h3>Leonardo Esaú Acosta García</h3>
+            <img src="" alt="" title="" class="creador" />
+            <p class="descripcion"></p>
+            <p class="facebook"><img src="svg/fb.svg" class="social-icon" /><a href=""></a></p>
+        </section>
+        <section>
+            <h3>Erick Alberto Frías Cámara</h3>
+            <img src="" alt="" title="" class="creador" />
+            <p class="descripcion"></p>
+            <p class="facebook"><img src="svg/fb.svg" class="social-icon" /><a href=""></a></p>
+        </section>
+        <section>
+            <h3>Erick Jhoan Flores Hernández</h3>
+            <img src="" alt="" title="" class="creador" />
+            <p class="descripcion"></p>
+            <p class="facebook"><img src="svg/fb.svg" class="social-icon" /><a href=""></a></p>
+        </section>
+        <section>
+            <h3>Ulices González Alejo</h3>
+            <img src="" alt="" title="" class="creador" />
+            <p class="descripcion"></p>
+            <p class="facebook"><img src="svg/fb.svg" class="social-icon" /><a href=""></a></p>
+        </section>
+        <section>
+            <h3>Jaime Pecero Casasnovas</h3>
+            <img src="" alt="" title="" class="creador" />
+            <p class="descripcion"></p>
+            <p class="facebook"><img src="svg/fb.svg" class="social-icon" /><a href=""></a></p>
+        </section>
+    </article>
+
+    <footer>
+        <p>Este juego está publicado bajo la <a rel="license" href="https://www.gnu.org/licenses/gpl.html">GNU GPLv3</a>, así como este sitio web.</p>
+        <p>Copyright © 2017 Giovanni Alfredo Garciliano Díaz</p>
+    </footer>
+</body>
+</html>
