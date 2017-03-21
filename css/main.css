@@ -116,6 +116,11 @@ input[type=submit] {
     padding: 1em;
 }
 
+/* Para navegadores actualizados */
+cssrequired {
+    display: none;
+}
+
 /* No tocar lo de abajo... */
 mark {
     background: none;

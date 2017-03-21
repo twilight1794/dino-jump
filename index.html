@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
 <head>
     <title>Dino Jump</title>
@@ -15,6 +15,11 @@
     <header>
         <h1>Dino Jump</h1>
     </header>
+    
+    <aside>
+        <p id="jsrequired" style="display: none">Bien, parece que vuestro navegador no soporta JavaScript, o lo tenés deshabilitado. Habilítalo, o <a href="https://www.mozilla.org/es-MX/firefox/new/">descarga un navegador libre, seguro y actualizado que soporta JavaScript.</a></p>
+        <p id="cssrequired">Bien, parece que vuestro navegador no soporta CSS, o lo tenés deshabilitado. Habilítalo, o <a href="https://www.mozilla.org/es-MX/firefox/new/">descarga un navegador libre, seguro y actualizado que soporta CSS.</a></p>
+    </aside>
 
     <article id="firstarticle">
         <h2>Acerca del juego</h2>
@@ -32,13 +37,13 @@
             <!-- Aquí se selecciona el paisaje -->
                 <fieldset>
                     <legend>Selecciona el paisaje:</legend>
-                    <input type="radio" name="personaje" value="desierto" checked="checked" id="desierto" /><label for="desierto">Desierto</label>
-                    <input type="radio" name="personaje" value="sabana" id="sabana" /><label for="sabana">Sabana</label>
+                    <input type="radio" name="paisaje" value="desierto" id="desierto" /><label for="desierto">Desierto</label>
+                    <input type="radio" name="paisaje" value="sabana" id="sabana" /><label for="sabana">Sabana</label>
                 </fieldset>
             <!-- Aquí se selecciona el personaje -->
                 <fieldset>
                     <legend>Selecciona el personaje:</legend>
-                    <input type="radio" name="personaje" value="rex" checked="checked" id="rex" /><label for="rex">Rex</label>
+                    <input type="radio" name="personaje" value="rex" id="rex" /><label for="rex">Rex</label>
                     <input type="radio" name="personaje" value="bunny" id="bunny" /><label for="bunny">Bunny</label>
                 </fieldset>
                 <input type="submit" name="jugar" value="A jugar!" />
@@ -59,7 +64,7 @@
         <section class="creador">
             <img src="img/leo.jpg" alt="Leo Foto" title="Leonardo" class="creador" />
             <h3>Leonardo Esaú Acosta García</h3>
-            <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet quam ultricies, iaculis nibh.</p>
+            <p class="descripcion">Me gusta escuchar música, leer y navegar en Internet.</p>
             <p class="trabajo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet quam ultricies, iaculis nibh.</p>
             <p class="facebook"><img src="img/fb.svg" class="social-icon" /> <a href="https://www.facebook.com/profile.php?id=100003440126955">Leonardo García</a></p>
             <p class="github"><img src="img/github.svg" class="social-icon" /> <a href="https://github.com/LeonardoEsau">LeonardoEsau</a></p>
@@ -67,7 +72,7 @@
         <section class="creador">
             <img src="img/erick1.jpg" alt="Erick 1 Foto" title="Erick 1" class="creador" />
             <h3>Erick Alberto Frías Cámara</h3>
-            <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet quam ultricies, iaculis nibh.</p>
+            <p class="descripcion">Fanático del campismo, la natación y la electricidad. También leer mangas. </p>
             <p class="trabajo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet quam ultricies, iaculis nibh.</p>
             <p class="facebook"><img src="img/fb.svg" class="social-icon" /> <a href="https://www.facebook.com/alberto.frias.927">Alberto Frias</a></p>
             <p class="github"><img src="img/github.svg" class="social-icon" /> <a href="https://github.com/arickalberto">arickalberto</a></p>
@@ -75,7 +80,7 @@
         <section class="creador">
             <img src="img/erick2.jpg" alt="Erick 2 Foto" title="Erick 2" class="creador" />
             <h3>Erick Jhoan Flores Hernández</h3>
-            <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet quam ultricies, iaculis nibh.</p>
+            <p class="descripcion">Me gusta dibujar, el anime y escuchar música.</p>
             <p class="trabajo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet quam ultricies, iaculis nibh.</p>
             <p class="facebook"><img src="img/fb.svg" class="social-icon" /> <a href="https://www.facebook.com/profile.php?id=100010443757381">Erick Hernández</a></p>
             <p class="github"><img src="img/github.svg" class="social-icon" /> <a href="https://github.com/erickzom">erickzom</a></p>
@@ -83,7 +88,7 @@
         <section class="creador">
             <img src="img/ulices.jpg" alt="Ulices Foto" title="Ulises" class="creador" />
             <h3>Ulices González Alejo</h3>
-            <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet quam ultricies, iaculis nibh.</p>
+            <p class="descripcion">Me gusta dibujar, el diseño gráfico, la arquitectura y Clash Royale</p>
             <p class="trabajo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet quam ultricies, iaculis nibh.</p>
             <p class="facebook"><img src="img/fb.svg" class="social-icon" /> <a href="https://www.facebook.com/profile.php?id=100013302734811">Ulices Gonzalez</a></p>
             <p class="github"><img src="img/github.svg" class="social-icon" /> <a href="https://github.com/gonzalezplay">gonzalezplay</a></p>
