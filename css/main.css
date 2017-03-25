@@ -112,10 +112,22 @@ fieldset {
     margin: 1em;
 }
 
-input[type=button] {
-    font-size: 2em;
-    padding: 1em;
+#ajugar {
+    border: none;
     background-color: black;
+    color: white;
+    padding: 1em;
+    font-size: 1.5em;
+    border-radius: .5em;
+    position: relative;
+    box-sizing: border-box;
+    transition: all 500ms ease;
+}
+
+#ajugar:hover {
+    background-color: #3a7999;
+    color: #f2f2f2;
+    box-shadow: inset 0 0 0 3px white;
 }
 
 /* Para navegadores actualizados */
