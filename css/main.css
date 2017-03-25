@@ -41,7 +41,7 @@ section.creador h3 {
 }
 
 /* Esto es para que todo quede centrado (y de paso un fondo)*/
-article, footer {
+article, footer, aside {
     width: 50%;
     padding: 20px;
     margin-left: 20%;
@@ -112,8 +112,10 @@ fieldset {
     margin: 1em;
 }
 
-input[type=submit] {
+input[type=button] {
+    font-size: 2em;
     padding: 1em;
+    background-color: black;
 }
 
 /* Para navegadores actualizados */
@@ -139,7 +141,7 @@ a {
 @media (max-width: 641px){
 
     /* Esto es para que lo que estaba centrado ya no se centre */
-    article, footer {
+    article, footer, aside {
         width: 96%;
         margin-left: 2%;
         margin-right: 2%;
