@@ -38,8 +38,18 @@ function checkForm(){
     }
 }
 
+function checkFormRegistro(){
+    /* Comprueba que las contraseñas sean iguales */
+    var pass1 = document.getElementById("contrasena1").value;
+    var pass2 = document.getElementById("contrasena2").value;
+    if (pass1 != pass2){
+        return false;
+    } else {
+        return true;
+    }
+}
+
 function submitForm(){
-    /* Si todo está correcto, se envía el formulario */
     if (checkForm() == true){
         ggg = document.getElementById("ajugar");
         ggg.value = "Enviando...";
@@ -47,8 +57,22 @@ function submitForm(){
     }
 }
 
+function submitFormRegistro(){
+    if (checkFormRegistro() == true){
+        ggg = document.getElementById("registrarseb");
+        ggg.value = "Accediendo...";
+        ggg.form.submit()
+    }
+}
+
 window.onload = function() {
     jsRequired();
-    buttonsubmit = document.getElementById("ajugar");
-    buttonsubmit.onclick = submitForm;
+    var pagvisitada = window.location.pathname;
+    if (pagvisitada == "/index.php" || pagvisitada == "/"){
+        buttonsubmit = document.getElementById("ajugar");
+        buttonsubmit.onclick = submitForm;
+    } else if (pagvisitada == "/registro.php"){
+        buttonsubmit = document.getElementById("registrarseb");
+        buttonsubmit.onclick = submitFormRegistro;
+    }
 }

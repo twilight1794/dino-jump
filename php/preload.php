@@ -1,16 +1,16 @@
 <?php
 // require "dislines.php";
-
+session_start();
 /* Biblioteca para generar partes de HTML dinámicamente */
 function doctype($titulo, $descripcion){
     echo "<!DOCTYPE HTML>\n<html>\n<head>\n";
-    echo "    <title>" + $titulo + "</title>\n";
+    echo "    <title>" . $titulo . "</title>\n";
     echo "    <link rel=\"stylesheet\" type=\"text/css\" href=\"/css/main.css\" />\n";
     echo "    <link rel=\"icon\" type=\"image/svg\" href=\"/svg/favicon.svg\" />\n";
     echo "    <meta name=\"author\" content=\"Giovanni Alfredo Garciliano Díaz\" />\n";
     echo "    <meta name=\"copyright\" content=\"© 2017 Giovanni Alfredo Garciliano Díaz\" />\n";
     echo "    <meta name=\"robots\" content=\"index, follow\" />\n";
-    echo "    <meta name=\"description\" content=\"" + $descripcion + "\" />\n";
+    echo "    <meta name=\"description\" content=\"" . $descripcion . "\" />\n";
     echo "    <meta name=\"viewport\" content=\"initial-scale=1.0, user-scalable=yes\" />\n";
     echo "    <meta charset=\"utf-8\">\n";
     echo "    <script src=\"js/main.js\" type=\"text/javascript\"></script>\n";
@@ -21,13 +21,14 @@ function doctype($titulo, $descripcion){
 function bodyheader($h1){
     echo "<body>\n";
     echo "    <header>\n";
-    echo "        <h1>" + $h1 + "</h1>\n";
+    echo "        <h1>" . $h1 . "</h1>\n";
     echo "        <nav><ul>\n";
-    if (isset($_POST["registrado"])) {
-        echo "            <li><a href=\"salir.php\">" + Salir + "</a></li>\n";
-        echo "            <li><a href=\"perfil.php\">" + $userData["usuario"] + "</a></li>\n";
+    if (isset($_SESSION[nombreusuario])) {
+        echo "            <li><a href=\"perfil.php\"><img src=\"$_SESSION[avatar]\" id=\"imgavatar\" /></a></li>\n";
+        echo "            <li><a href=\"perfil.php\">" . $_SESSION[nombreusuario] . "</a></li>\n";
+        echo "            <li><a href=\"procesar.php?accion=salida\">Salir</a></li>\n";
     } else {
-        echo "            <li><a href=\"registrarse.php\">Registrarse</a></li>\n";
+        echo "            <li><a href=\"registro.php\">Registrarse</a></li>\n";
         echo "            <li><a href=\"acceder.php\">Acceder</a></li>\n";
     }
     echo "        </ul></nav>\n";

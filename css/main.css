@@ -21,7 +21,27 @@ body {
     text-align: justify;
 }
 
+nav {
+    display: inline-block;
+	float: right;
+}
+
+nav li {
+    float: right;
+    display: inline-block;
+    background: blue;
+    border-radius: 2px;
+    margin: 2px;
+    padding: 2px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+}
+
 h1 {
+	display: inline-block;
     font-family: "Chelsea Market";
     font-weight: normal;
 }
@@ -67,6 +87,10 @@ header {
     margin-top: 6em;
 }
 
+#imgavatar {
+    width: 2.5em;
+}
+
 /* Iconos de Facebook, Twitter */
 .social-icon {
     width: 1em;
@@ -110,6 +134,27 @@ form {
 
 fieldset {
     margin: 1em;
+}
+
+input {
+    padding: .4em;
+    border-radius: 8px;
+}
+
+label {
+  display: block;
+  margin: 1em 0 0 0;
+}
+/* El estilo anterior hace que todos los labels salten a la siguiente línea...
+Eso es malo con los labels que van después de un radiobutton, por ello la siguiente línea*/
+.lblrb {
+    display: inline;
+    margin: 0px;
+}
+
+input[type=button], button {
+  display: block;
+  margin: 1em 0;
 }
 
 #ajugar {

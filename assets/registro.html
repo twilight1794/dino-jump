@@ -1,0 +1,20 @@
+    <article id="firstarticle">
+        <section id="registroform">
+            <form action="procesar.php" method="post">
+                <input name="accion" value="registro" type="hidden" />
+                <label for="nombreusuario">Escriba un nombre de usuario: </label><input id="nombreusuario" name="nombreusuario" type="text" />
+                <label for="email">Escriba su correo electrónico: </label><input id="email" name="email" type="email" />
+                <label for="contrasena1">Escriba una contraseña: </label><input id="contrasena1" name="contrasena1" type="password" />
+	            <label for="contrasena2">Repita la contraseña: </label><input id="contrasena2" type="password" />
+	            <fieldset id="fieldavatar">
+	                <legend>Selecciona un color: </legend>
+	                <input name="avatar" id="avatarazul" value="/img/pblue.svg" type="radio" /><label class="lblrb">Azul</label>
+	                <input name="avatar" id="avatarrojo" value="/img/pred.svg" type="radio" /><label class="lblrb">Rojo</label>
+	                <input name="avatar" id="avatarmorado" value="/img/ppurple.svg" type="radio" /><label class="lblrb">Morado</label>
+	                <input name="avatar" id="avataramarillo" value="/img/pyellow.svg" type="radio" /><label class="lblrb">Amarillo</label>
+	                <input name="avatar" id="avatarverde" value="/img/pgreen.svg" type="radio" /><label class="lblrb">Verde</label>
+	            </fieldset>
+	            <input style="display: inline-block" name="Registrarse" value="Registrarse" id="registrarseb" type="button" />
+            </form>
+        </section>
+    </article>
