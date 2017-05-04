@@ -127,6 +127,18 @@ section.creador {
     font-family: monospace;
 }
 
+/* Estilos de controles del juego */
+#botonera *, #barraestado * {
+    display: inline-block;
+    margin: .5em;
+}
+
+#botonera, #barraestado {
+    padding: .5em;
+    border: solid yellow 1px;
+    border-radius: 1em;
+}
+
 /* Estilos para formularios */
 form {
     text-align: center;
@@ -157,6 +169,11 @@ input[type=button], button {
   margin: 1em 0;
 }
 
+/* Por alguna razón siempre están "volando" fuera de la línea */
+input[type=range], progress, meter {
+    vertical-align: middle;
+}
+
 #ajugar {
     border: none;
     background-color: black;
@@ -174,6 +191,7 @@ input[type=button], button {
     color: #f2f2f2;
     box-shadow: inset 0 0 0 3px white;
 }
+
 
 /* Para navegadores actualizados */
 #cssrequired {
@@ -203,5 +221,8 @@ a {
         margin-left: 2%;
         margin-right: 2%;
         padding: 5px;
+    }
+    #firstarticle {
+        margin-top: 9em;
     }
 }

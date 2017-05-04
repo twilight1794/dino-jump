@@ -1,7 +1,13 @@
-    <article id="paneljuego firstarticle">
-        <section id="opciones">
-            <button>Sonido activado</button>
+    <article id="firstarticle">
+        <section id="botonera">
+            <button id="btnSound">Sonido activado</button>
+            <div><label for="volumenrg">Volumen: </label><input type="range" min="0" max="1" value="1" step="0.1" id="volumenrg" /></div>
         </section>
         <svg id="juego">
         </svg>
+        <section id="barraestado">
+            <div><label for="volumenrg">Progreso: </label><meter value="0" min="0" max="100" low="0" high="100" optimum="100">Puntuación</meter></div>
+            <div><label for="volumenrg">Puntuación: </label><output for="juego"></output></div>
+        </section>
+        <audio id="audiobg" src="ogg/Dino_Jump_Track.ogg" loop preload="auto"></audio>
     </article>

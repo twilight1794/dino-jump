@@ -65,6 +65,20 @@ function submitFormRegistro(){
     }
 }
 
+/* Funciones para opciones del juego */
+function MuteDismuteSound(){
+    if (audiobg.paused == true) {
+        audiobg.play();
+        volcontrol.disabled = false;
+        volcontrol.value = volanterior;
+    } else {
+        audiobg.pause();
+        volanterior = volcontrol.value;
+        volcontrol.value = 0;
+        volcontrol.disabled = true;
+    }
+}
+
 window.onload = function() {
     jsRequired();
     var pagvisitada = window.location.pathname;
@@ -74,5 +88,16 @@ window.onload = function() {
     } else if (pagvisitada == "/registro.php"){
         buttonsubmit = document.getElementById("registrarseb");
         buttonsubmit.onclick = submitFormRegistro;
+    } else if (pagvisitada == "/game.php"){
+        volanterior = 1;
+        /* Botón de sonido */
+        audiobg = document.getElementById("audiobg");
+        btnSound = document.getElementById("btnSound");
+        btnSound.onclick = MuteDismuteSound;
+        /* Control volumen */
+        volcontrol = document.getElementById("volumenrg");
+        volcontrol.addEventListener("change",function(ev){
+            audiobg.volume = ev.target.value;
+        },true);
     }
 }

@@ -1,5 +1,5 @@
 <?php
-$archivo = "assets/registro.html";
+$archivo = "assets/acceder.html";
 $titulo = "Registro";
 $descripcion = "Registrarse para jugar en Dino Jump";
 $h1 = "Regístrate";
