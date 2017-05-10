@@ -118,6 +118,25 @@ section.creador {
     font-style: italic;
 }
 
+/* Perfil */
+h2 .nombreusuario {
+    font-style: italic;
+}
+
+.perfilprinc {
+    width: 10em;
+    display: inline-block;
+    margin: 1em;
+}
+
+dt {
+    font-weight: bold;
+}
+
+#infousuario {
+    display: inline-block;
+}
+
 /* Estilos de botón */
 .button-html {
     border-radius: 3px;

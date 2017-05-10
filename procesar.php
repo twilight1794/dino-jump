@@ -37,39 +37,12 @@ switch ($_POST['accion']){
             }
         }
         break;
-/*        while (mysqli_fetch_row($consulta)){
-            $linea = mysqli_fetch_row($consulta);
-            if ($linea[1] == $_POST[nombreusuario]){
-                if ($line[3] == $_POST[contrasena]){
-                    session_start();
-                    $_SESSION[nombreusuario] = $_POST[nombreusuario];
-                    $_SESSION[contrasena] = $_POST[contrasena];
-                    header("location: game.php");
-                } else {
-                    header("location: acceder.php");
-                }
-            } else {
-                if ($linea[2] == $_POST[nombreusuario]){
-                    if ($line[3] == $_POST[contrasena]){
-                        session_start();
-                        $_SESSION[nombreusuario] = $_POST[nombreusuario];
-                        $_SESSION[contrasena] = $_POST[contrasena];
-                        header("location: game.php");
-                    } else {
-                        header("location: acceder.php");
-                    }
-                } else {
-                    continue;
-                }
-            }
-        }‪
-        echo "Hola mundo";*/
 }
 switch ($_GET['accion']){
     case "salida":
         session_start();
         $_SESSION = array();
         session_destroy();
-        header("location: index.php");
+        header("location: index.php");      
 }
 ?>

@@ -24,8 +24,8 @@ function bodyheader($h1){
     echo "        <h1>" . $h1 . "</h1>\n";
     echo "        <nav><ul>\n";
     if (isset($_SESSION[nombreusuario])) {
-        echo "            <li><a href=\"perfil.php\"><img src=\"$_SESSION[avatar]\" id=\"imgavatar\" /></a></li>\n";
-        echo "            <li><a href=\"perfil.php\">" . $_SESSION[nombreusuario] . "</a></li>\n";
+        echo "            <li><a href=\"perfil.php?nombreusuario=" . $_SESSION[nombreusuario] . "\"><img src=\"$_SESSION[avatar]\" id=\"imgavatar\" /></a></li>\n";
+        echo "            <li><a href=\"perfil.php?nombreusuario=" . $_SESSION[nombreusuario] . "\">" . $_SESSION[nombreusuario] . "</a></li>\n";
         echo "            <li><a href=\"procesar.php?accion=salida\">Salir</a></li>\n";
     } else {
         echo "            <li><a href=\"registro.php\">Registrarse</a></li>\n";

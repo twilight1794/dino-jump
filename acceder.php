@@ -1,8 +1,8 @@
 <?php
 $archivo = "assets/acceder.html";
-$titulo = "Registro";
+$titulo = "Acceso";
 $descripcion = "Registrarse para jugar en Dino Jump";
-$h1 = "Regístrate";
+$h1 = "Accede";
 require ("php/preload.php");
 doctype($titulo, $descripcion);
 bodyheader($h1);
