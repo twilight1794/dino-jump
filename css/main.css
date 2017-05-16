@@ -72,6 +72,14 @@ article, footer, aside {
     border-radius: 1em;
 }
 
+#favicon-principal {
+    display: inline-block;
+    height: 4em;
+    float: left;
+    vertical-align: baseline;
+    margin: .5em;
+}
+
 /* Cabecera de arriba */
 header {
     width: 100%;
@@ -194,6 +202,8 @@ input[type=range], progress, meter {
 }
 
 #ajugar {
+    display: inline-block;
+    margin: 0em;
     border: none;
     background-color: black;
     color: white;

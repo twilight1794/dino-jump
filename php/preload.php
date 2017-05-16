@@ -21,6 +21,7 @@ function doctype($titulo, $descripcion){
 function bodyheader($h1){
     echo "<body>\n";
     echo "    <header>\n";
+    echo "        <img src=\"/favicon.svg\" id=\"favicon-principal\"/>";
     echo "        <h1>" . $h1 . "</h1>\n";
     echo "        <nav><ul>\n";
     if (isset($_SESSION[nombreusuario])) {
