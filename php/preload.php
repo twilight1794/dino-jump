@@ -6,7 +6,7 @@ function doctype($titulo, $descripcion){
     echo "<!DOCTYPE HTML>\n<html>\n<head>\n";
     echo "    <title>" . $titulo . "</title>\n";
     echo "    <link rel=\"stylesheet\" type=\"text/css\" href=\"/css/main.css\" />\n";
-    echo "    <link rel=\"icon\" type=\"image/svg\" href=\"/svg/favicon.svg\" />\n";
+    echo "    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\" />\n";
     echo "    <meta name=\"author\" content=\"Giovanni Alfredo Garciliano Díaz\" />\n";
     echo "    <meta name=\"copyright\" content=\"© 2017 Giovanni Alfredo Garciliano Díaz\" />\n";
     echo "    <meta name=\"robots\" content=\"index, follow\" />\n";
