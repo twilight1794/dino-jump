@@ -61,7 +61,7 @@ section.creador h3 {
 }
 
 /* Esto es para que todo quede centrado (y de paso un fondo)*/
-article, footer, aside {
+article, footer, aside, main {
     width: 50%;
     padding: 20px;
     margin-left: 20%;
@@ -88,6 +88,7 @@ header {
     top: 0px;
     left: 0px;
     background: black;
+    z-index: 100;
 }
 
 /* Para que el contenido no se quede abajo de la cabecera */
@@ -155,6 +156,12 @@ dt {
 }
 
 /* Estilos de controles del juego */
+.juegocompleto {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #botonera *, #barraestado * {
     display: inline-block;
     margin: .5em;
@@ -164,6 +171,20 @@ dt {
     padding: .5em;
     border: solid yellow 1px;
     border-radius: 1em;
+}
+
+#juego {
+    width: auto;
+    background: whitesmoke;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: 1em;
+}
+
+#imgpersonaje {
+    position: relative;
+    left: 0px;
+    top: 0px;
 }
 
 /* Estilos para formularios */

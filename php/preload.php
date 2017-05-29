@@ -51,7 +51,6 @@ function footer(){
     echo "        <p>Este juego está publicado bajo la <a rel=\"license\" href=\"https://www.gnu.org/licenses/gpl.html\">GNU GPLv3</a>, así como este sitio web.</p>\n";
     echo "        <p>Copyright © 2017 Giovanni Alfredo Garciliano Díaz</p>\n";
     echo "    </footer>\n";
-    echo "<!--<audio src=\"ogg/Dino_Jump_Track.ogg\" autoplay loop preload=\"auto\"></audio>-->\n";
     echo "</body>\n";
     echo "</html>\n";
 }
