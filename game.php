@@ -11,6 +11,7 @@ bodyasides();
     <article id="firstarticle" class="juegocompleto">
         <section id="botonera">
             <button id="btnSound">Sonido activado</button>
+            <button id="btnRestart">Iniciar</button>
             <div><label for="volumenrg">Volumen: </label><input type="range" min="0" max="1" value="1" step="0.1" id="volumenrg" /></div>
         </section>
         <div id="juego"></div>

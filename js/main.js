@@ -1,9 +1,3 @@
-/* Un sleep() */
-function delay(nsegundos){
-    objetivo = (new Date()).getTime() + 1000 * Math.abs(nsegundos);
-    while ( (new Date()).getTime() < objetivo );
-}
-
 /* Oculta el aviso de JavaScript a los navegadores que sí lo soportan */
 function jsRequired(){
     var ggg = document.getElementById("jsrequired");
@@ -98,26 +92,56 @@ function quitPxSuffix(propiedad){
     }
 }
 
-function dinoJump(theEvent){
-     var event = window.event || theEvent;
-     if (event.charCode == 32){
-        imgp = document.getElementById("imgpersonaje");
-        for (var i = 0; i < 50; i++){
-            imgp.style.top = String(Number(quitPxSuffix(imgp.style.top)) - 1).concat("px");
-            delay(50);
-        }
-     }
+function cactus(){
+    i = 0;
 }
 
-function isAlive(){
-    return true;
-}
-
-function setPuntuacion(){
-    output = document.getElementsByTagName("output")[0];
-    while (isAlive()){
-        setTimeout(function(){output.childNodes[0].nodeValue = String(Number(output.childNodes[0].nodeValue) + 4);}, 100);
+/*function dinoNoJump(){
+    imgp = document.getElementById("imgpersonaje");
+    for (var i = 0; i < 50; i++){
+        imgp.style.top = String(Number(quitPxSuffix(imgp.style.top)) + 1).concat("px");
     }
+}
+
+function dinoJump(){
+    imgp = document.getElementById("imgpersonaje");
+    for (var i = 0; i < 50; i++){
+       imgp.style.top = String(Number(quitPxSuffix(imgp.style.top)) - 1).concat("px");
+    }
+}*/
+
+function dinoJump(){
+    it = 0;
+    imgp = document.getElementById("imgpersonaje");
+    djPointer = setInterval(function(){
+        if (it < 50){
+            imgp.style.top = String(Number(quitPxSuffix(imgp.style.top)) - 1).concat("px");
+        } else if (it > 50) {
+            imgp.style.top = String(Number(quitPxSuffix(imgp.style.top)) + 1).concat("px");
+        } else if (imgp.style.top == 0) {
+            imgp.style.top = String(Number(quitPxSuffix(imgp.style.top)) + 0).concat("px");
+        }
+        it++;
+    }, 25);
+}
+
+function main(theEvent){
+    dinoJump(theEvent);
+    if (firsttime == true){
+        output = document.getElementsByTagName("output")[0];
+        outputPointer = setInterval(function(){
+            output.childNodes[0].nodeValue = String(Number(output.childNodes[0].nodeValue) + 1);
+        }, 100);
+        dinoJump();
+    }
+    firsttime = false;
+}
+
+function reiniciarPag(){
+    firsttime = true;
+    output.childNodes[0].nodeValue = "0";
+    clearInterval(outputPointer);
+    imgpersonaje.style.top = "0px";
 }
 
 window.onload = function() {
@@ -144,6 +168,7 @@ window.onload = function() {
         divjuego = document.getElementById("juego");
         imgfondo = document.createElement("img");
         imgpersonaje = document.createElement("img");
+        imgcactus = document.createElement("img");
         if (paisaje == "desierto"){
             imgfondo.setAttribute("src","../img/game/desierto.svg");
         } else {
@@ -155,6 +180,10 @@ window.onload = function() {
         } else {
             imgpersonaje.setAttribute("src","../img/game/c-stop.png");
         }
+        imgcactus.setAttribute("src","../img/game/cactus.png")
+        imgcactus.style.height = "48px";
+        imgcactus.style.position = "absolute";
+        imgcactus.style.left = "680px";
         imgfondo.style.opacity = ".5";
         imgfondo.style.width = "100%";
         imgfondo.id = "imgfondo";
@@ -163,8 +192,13 @@ window.onload = function() {
         imgpersonaje.id = "imgpersonaje";
         divjuego.appendChild(imgfondo);
         divjuego.appendChild(imgpersonaje);
+        divjuego.appendChild(imgcactus);
+        
         /* Juego */
-        document.onkeypress = dinoJump;
+        document.onkeypress = main;
         firsttime = true;
+        corriendo = true;
+        btnRestart = document.getElementById("btnRestart");
+        btnRestart.onclick = function(){location.reload();};
     }
 }
